@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>祝福杰瑞生日快乐</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
 
+<h1>祝福杰瑞生日快乐</h1>
+<img src="https://i.ibb.co/b11sYkB/image.png" alt="杰瑞的图片">
+
+<button onclick="vote()">点击投票</button>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content">
+    <h2>杰瑞能在今年找到漂亮的女鼠鼠吗？</h2>
+    <div>
+      <button onclick="showBlessing('不帅')">能</button>
+      <button onclick="showBlessing('一般')">不能</button>
+      <button onclick="showBlessing('别看了我没给你第三个选项')">别看了我没给你第三个选项</button>
+      <img src="https://i.ibb.co/Q9SDbCz/image.png" alt="杰瑞的图片">
+    </div>
+  </div>
+</div>
+
+<script>
+var modalOverlay = document.getElementById('modalOverlay');
+
+function vote() {
+  modalOverlay.style.display = 'flex';
+}
+
+function showBlessing(option) {
+  modalOverlay.style.display = 'none';
+  alert('当然能啦！祝杰瑞生日快乐！');
+}
+</script>
+
+</body>
+</html>
